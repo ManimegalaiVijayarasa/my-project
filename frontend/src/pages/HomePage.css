@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.home-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 25%, #fcb69f 50%, #a1c4fd 75%, #c2e9fb 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 80px;
+  text-align: center;
+  padding: 40px 20px;
+  animation: bgShift 10s infinite alternate;
+}
+
+@keyframes bgShift {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.home-logo {
+  width: 300px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid white;
+  object-fit: cover;
+  margin-bottom: 30px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+  animation: glowLogo 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowLogo {
+  from { box-shadow: 0 0 10px #fff; }
+  to { box-shadow: 0 0 20px #fff; }
+}
+
+.home-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px #000;
+  font-style: italic;
+}
+
+.home-subtext {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px #444;
+  max-width: 500px;
+}
+
+.home-button {
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  background: #ff6f91;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.home-button:hover {
+  background: #ff4e7a;
+  transform: scale(1.05);
+}
+
+.home-footer {
+  margin-top: 90px;
+  font-size: 1.2rem;
+  color: rgb(9, 65, 54);
+  opacity: 0.8;
+  text-align: center;
+}
+
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@media (max-width: 480px) {
+  .home-logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtext {
+    font-size: 1rem;
+  }
+
+  .home-button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+}
