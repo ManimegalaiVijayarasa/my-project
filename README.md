@@ -1,278 +1,256 @@
-\# Course Registration System
+# Course Registration System
 
+### Full-Stack Academic Course Registration Management Application
 
+A full-stack web application developed to simplify and digitalize the academic course registration process. The system provides a centralized platform for students to explore available courses, manage their registrations, and access academic information, while administrators can manage courses, monitor registrations, and view analytics.
 
-A full-stack web application designed to simplify and manage academic course registration. The system provides a user-friendly interface for students and administrative users to interact with course information and registration services.
+This project was developed as an **academic group project** using the MERN stack (MongoDB, Express.js, React.js, and Node.js).
 
+---
 
+## Key Features
 
-\## Technologies Used
+### Student Features
+- User registration and secure login
+- Student dashboard
+- Browse available courses
+- Register for courses
+- Access course registration information
+- User-friendly and responsive interface
 
+### Administrator Features
+- Administrative dashboard
+- Course management
+- Course registration management
+- Analytics and data visualization
+- Administrative access to registration information
 
+### Additional Functionality
+- JWT-based authentication
+- Password hashing using bcryptjs
+- RESTful API communication
+- Email integration using Nodemailer
+- PDF generation functionality using PDFKit
 
-\*\*Frontend\*\*
+---
 
-\- React.js
+## Technology Stack
 
-\- JavaScript
+| Category | Technologies |
+|---|---|
+| Frontend | React.js 18, JavaScript, HTML5, CSS3 |
+| Routing | React Router |
+| API Communication | Axios |
+| Data Visualization | Chart.js, React Chart.js 2 |
+| Backend | Node.js, Express.js 5 |
+| Database | MongoDB |
+| ODM | Mongoose |
+| Authentication | JWT, bcryptjs |
+| Email Integration | Nodemailer |
+| PDF Generation | PDFKit |
+| Version Control | Git, GitHub |
 
-\- HTML5 and CSS3
+---
 
-\- React Router
+## Application Screenshots
 
-\- Axios
+The following screenshots demonstrate the application's user interface and functionality.
 
-\- Chart.js and React Chart.js 2
+### Application Interface
 
+![Course Registration System Screenshot 1](outputs/Screenshot%202025-07-03%20080541.png)
 
+### Additional Screenshots
 
-\*\*Backend\*\*
+![Course Registration System Screenshot 2](outputs/Screenshot%202025-07-03%20080607.png)
 
-\- Node.js
+![Course Registration System Screenshot 3](outputs/Screenshot%202025-07-03%20080621.png)
 
-\- Express.js
+![Course Registration System Screenshot 4](outputs/Screenshot%202025-07-03%20080641.png)
 
-\- MongoDB and Mongoose
+![Course Registration System Screenshot 5](outputs/Screenshot%202025-07-03%20080652.png)
 
-\- JSON Web Tokens (JWT)
+Additional screenshots are available in the [outputs directory](outputs/).
 
-\- bcryptjs
+---
 
-\- Nodemailer
-
-\- PDFKit
-
-
-
-\## Main Features
-
-
-
-\- User registration and login
-
-\- Course information and management
-
-\- Course registration functionality
-
-\- Student dashboard
-
-\- Administrative panel
-
-\- Analytics and data visualization
-
-\- Email-related functionality
-
-\- PDF-related functionality
-
-
-
-\## Project Structure
-
-
+## Project Structure
 
 ```text
-
-CourseRegistrationSystem/
-
+my-project/
 ├── backend/
-
 │   ├── middleware/
-
+│   │   └── auth.js
 │   ├── models/
-
+│   │   ├── Course.js
+│   │   ├── Registration.js
+│   │   └── User.js
 │   ├── routes/
-
+│   │   ├── auth.js
+│   │   ├── courses.js
+│   │   └── registration.js
 │   ├── utils/
-
+│   │   └── sendEmail.js
 │   ├── server.js
-
 │   ├── package.json
-
 │   └── package-lock.json
-
 ├── frontend/
-
 │   ├── public/
-
 │   ├── src/
-
 │   │   ├── pages/
-
 │   │   ├── services/
-
 │   │   ├── App.js
-
 │   │   └── index.js
-
 │   ├── package.json
-
 │   └── package-lock.json
-
 ├── outputs/
-
 ├── .gitignore
-
 └── README.md
-
 ```
 
+---
 
+## Installation and Setup
 
-\## Installation and Setup
+### Prerequisites
 
+Ensure that the following software is installed:
 
+- Node.js and npm
+- MongoDB (local installation or MongoDB Atlas)
+- Git
+- A code editor such as Visual Studio Code
 
-\### Prerequisites
-
-
-
-\- Node.js and npm
-
-\- MongoDB database
-
-\- Git
-
-
-
-\### Clone the Repository
-
-
+### 1. Clone the Repository
 
 ```bash
-
 git clone https://github.com/ManimegalaiVijayarasa/my-project.git
-
 cd my-project
-
 ```
 
+### 2. Backend Setup
 
-
-\### Backend Setup
-
-
+Navigate to the backend directory:
 
 ```bash
-
 cd backend
-
-npm install
-
 ```
 
+Install dependencies:
 
+```bash
+npm install
+```
 
-Create a `.env` file inside the `backend` directory with the following variables:
+Create a `.env` file in the `backend` directory.
 
-
+Example configuration:
 
 ```env
-
 PORT=5000
-
-MONGO\_URI=your\_mongodb\_connection\_string
-
+MONGO_URI=your_mongodb_connection_string
 ```
 
+Configure any additional environment variables required by the authentication and email services.
 
-
-Additional environment variables may be required for authentication and email services, depending on the configuration.
-
-
-
-Start the backend:
-
-
+Start the backend server:
 
 ```bash
-
 npm start
-
 ```
 
+The backend API runs by default at:
 
+`http://localhost:5000`
 
-The backend server runs at `http://localhost:5000` by default.
+A successful startup should display messages similar to:
 
+```text
+Server running on port 5000
+MongoDB connected
+```
 
+### 3. Frontend Setup
 
-\### Frontend Setup
-
-
-
-Open another terminal in the project root:
-
-
+Open a second terminal and navigate to the frontend directory from the repository root:
 
 ```bash
-
 cd frontend
-
-npm install
-
-npm start
-
 ```
 
+Install dependencies:
 
+```bash
+npm install
+```
 
-The React application should open at:
+Start the React development server:
 
+```bash
+npm start
+```
 
+Open the application in your browser:
 
 `http://localhost:3000`
 
+---
 
+## API Endpoints
 
-\## Screenshots
+The backend provides RESTful API routes for authentication, course management, and registration.
 
-
-
-Screenshots demonstrating the application interfaces are available in the \[`outputs`](outputs/) directory.
-
-
-
-\## API Routes
-
-
-
-The backend organizes its API endpoints under the following routes:
-
-
-
-| Route Prefix | Purpose |
-
+| API Route | Description |
 |---|---|
+| `/api/auth` | User authentication and account operations |
+| `/api/courses` | Course-related operations |
+| `/api/registrations` | Course registration operations |
+| `/` | Backend availability response |
 
-| `/api/auth` | Authentication |
+The specific HTTP methods and endpoints are implemented in the backend route files.
 
-| `/api/courses` | Course operations |
+---
 
-| `/api/registrations` | Registration operations |
+## Security
 
+The application uses:
 
+- JSON Web Tokens for authentication
+- bcryptjs for password hashing
+- Environment variables for sensitive configuration
+- Authentication middleware for protected operations
 
-\## Security
+**Important:** Never commit `.env` files, database credentials, JWT secrets, or email passwords to a public repository.
 
+---
 
+## Future Enhancements
 
-Environment configuration files, including `.env`, are excluded from version control to help protect sensitive credentials.
+Potential improvements include:
 
+- Course timetable conflict detection
+- Automated prerequisite validation
+- Improved student notification workflows
+- Advanced administrative analytics
+- Cloud deployment
+- Additional automated tests
 
+---
 
-\## Project Type
+## Project Information
 
+**Project Name:** Course Registration System
 
+**Project Type:** Academic Group Project
 
-Academic group project — Course Registration System.
+**Application Type:** Full-Stack Web Application
 
+**Architecture:** MERN Stack
 
+**Repository:** [Course Registration System — GitHub](https://github.com/ManimegalaiVijayarasa/my-project)
 
-\## Repository
+---
 
+## Acknowledgment
 
-
-\[GitHub — Course Registration System](https://github.com/ManimegalaiVijayarasa/my-project)
-
-
-
+This project was developed as part of an academic group project to gain practical experience in full-stack web development, database management, RESTful APIs, authentication, and frontend-backend integration.
