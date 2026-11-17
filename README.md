@@ -56,11 +56,8 @@ This project was developed as an **academic group project** using the MERN stack
 
 The following screenshots demonstrate the application's user interface and functionality.
 
-### Application Interface
 
 ![Course Registration System Screenshot 1](outputs/Screenshot%202025-07-03%20080541.png)
-
-### Additional Screenshots
 
 ![Course Registration System Screenshot 2](outputs/Screenshot%202025-07-03%20080607.png)
 
